@@ -36,6 +36,7 @@ class CarsensorPublisher(ROSPublisher):
  
 
         carsensor = Float64MultiArray()
+        carsensor.header = self.get_ros_header()
         carsensor.data = arrayList
         carsensor.layout.dim.append(dim)
         carsensor.layout.data_offset = 0
